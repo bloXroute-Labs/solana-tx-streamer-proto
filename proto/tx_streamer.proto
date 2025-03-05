@@ -1,0 +1,22 @@
+syntax = "proto3";
+package tx_streamer;
+
+// Transaction message containing the raw transaction data and metadata.
+message Transaction {
+  string signature = 1;
+  bytes data = 2;
+  uint64 slot = 3;
+  bool unverified_match = 4;
+}
+
+// Service for streaming transactions reconstructed from shreds.
+service TxStreamerService {
+  // Stream transactions as they are reconstructed from shreds
+  rpc StreamTransactions(StreamTransactionsRequest) returns (stream Transaction) {}
+}
+
+// Transaction streaming request.
+message StreamTransactionsRequest {
+  // Filter by account (empty denotes no filtering).
+  repeated string accounts = 1;
+}
