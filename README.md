@@ -1,6 +1,6 @@
 # Protobuf Files for Solana Tx Streamer
 
-This repository contains Protocol Buffers (`.proto`) definition files for gRPC communication with the Solana Tx Streamer.
+This repository contains Protocol Buffers (`.proto`) definition files for gRPC communication with the Solana Tx Streamer. See complete documentation in https://docs.bloxroute.com/solana/optimized-feed-relay/transaction-streamer.
 
 ## TxStreamerService
 
