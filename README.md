@@ -14,3 +14,4 @@ Streams transactions, optionally filtered by associated accounts. Each streamed 
 - `slot` – The slot in which the transaction was recorded.
 - `data` – The raw transaction bincode-encoded data.
 - `unverified_match` – Indicates potential irrelevance of the transaction based on the specified filtering criteria. If `true`, the service is uncertain about the match but includes the transaction to prevent the client from missing potentially relevant data.
+- `number` – Index position of this transaction within the block.
